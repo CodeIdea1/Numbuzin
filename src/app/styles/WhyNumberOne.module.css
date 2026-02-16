@@ -1,0 +1,83 @@
+
+
+.imageBox {
+  width: 100%;
+  min-height: 900px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: url('/sec2.webp');
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  will-change: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.imageBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  margin-right: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.feature {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.528) 0%, rgba(118, 75, 162, 0.62) 100%);
+  padding: .8rem 1rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 450px;
+  text-align: center;
+  will-change: transform, opacity;
+        backdrop-filter: blur(5px);
+
+}
+
+.feature p {
+  font-size: 1.3rem;
+  color: #f0f0f0;
+  margin: 0;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .imageBox::before {
+    background: rgba(0, 0, 0, 0.592);
+  }
+  
+  .imageBox {
+    justify-content: center;
+  }
+
+  .featureTitle {
+    color: white;
+    text-align: center;
+  }
+}

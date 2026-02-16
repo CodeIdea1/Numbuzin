@@ -1,0 +1,224 @@
+.hero {
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentWrapper {
+  position: relative;
+  margin-top: -90px;
+  z-index: 1;
+}
+
+.contentWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.646) 0%, rgba(118, 75, 162, 0.41) 100%);
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.148);
+        backdrop-filter: blur(5px);
+
+  border-radius: 20px;
+  padding: 2rem 7rem;
+  border: 1px solid rgba(255, 255, 255, 0.627);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2d3748;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.highlight {
+  color: #667eea;
+  display: block;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #5a6c7d;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.brandName {
+  font-size: 9rem;
+  font-weight: 800;
+  color: #667eea;
+  text-align: center;
+  margin-bottom: -50px;
+  margin-top: 10px;
+}
+
+.productImage {
+  width:540px;
+  height: 540px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: visible;
+}
+
+.productImage::before,
+.productImage::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.productImage::before {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.productImage::after {
+  bottom: 30%;
+  right: 15%;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+}
+
+.productImage img {
+  width: 83%;
+  height: auto;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0rem 1rem;
+  }
+  .brandName  {
+    font-size: 18vw;
+  margin-top: 0px;
+
+      margin-bottom: -20px;
+
+  }
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 2px;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+      color: #343f4a;
+      line-height: 1.5;
+      font-weight: 700;
+
+  }
+
+  .productImage {
+    width: 300px;
+    height: 300px;
+  }
+  .content {
+    padding: 10px 22px;
+  }
+  
+}
+
+.dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9, .dot10, .dot11, .dot12, .dot13, .dot14, .dot15, .dot16, .dot17, .dot18, .dot19, .dot20 {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* أحجام مختلفة */
+.dot1, .dot5, .dot9, .dot13, .dot17 { 
+  width: 8px; 
+  height: 8px; 
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dot2, .dot6, .dot10, .dot14, .dot18 { 
+  width: 6px; 
+  height: 6px; 
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.dot3, .dot7, .dot11, .dot15, .dot19 { 
+  width: 10px; 
+  height: 10px; 
+  background: rgba(255, 255, 255, 0.3);
+  filter: blur(1px);
+}
+
+.dot4, .dot8, .dot12, .dot16, .dot20 { 
+  width: 5px; 
+  height: 5px; 
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.dot1 { top: 8%; left: 12%; }
+.dot2 { top: 15%; right: 18%; }
+.dot3 { top: 22%; left: 25%; }
+.dot4 { top: 30%; right: 8%; }
+.dot5 { top: 38%; left: 15%; }
+.dot6 { top: 45%; right: 22%; }
+.dot7 { top: 52%; left: 10%; }
+.dot8 { top: 60%; right: 15%; }
+.dot9 { top: 68%; left: 20%; }
+.dot10 { top: 75%; right: 25%; }
+.dot11 { bottom: 18%; left: 12%; }
+.dot12 { bottom: 25%; right: 10%; }
+.dot13 { top: 12%; left: 35%; }
+.dot14 { top: 28%; right: 30%; }
+.dot15 { top: 42%; left: 5%; }
+.dot16 { top: 55%; right: 5%; }
+.dot17 { bottom: 30%; left: 30%; }
+.dot18 { bottom: 12%; right: 35%; }
+.dot19 { top: 18%; left: 8%; }
+.dot20 { bottom: 22%; right: 12%; }

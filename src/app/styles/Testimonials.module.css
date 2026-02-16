@@ -1,0 +1,154 @@
+.section {
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 3rem;
+}
+
+.swiperWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.navButton {
+  background: white;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  color: #667eea;
+  font-size: 24px;
+}
+
+.navButton:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  transform: scale(1.1);
+}
+
+.swiper {
+  flex: 1;
+  padding-bottom: 4rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.imageWrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.userImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.location {
+  font-size: 1rem;
+  color: #718096;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: -0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.star {
+  color: #fbbf24;
+  font-size: 1.3rem;
+}
+
+.review {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #4a5568;
+  font-style: italic;
+  text-align: center;
+}
+
+.swiper :global(.swiper-pagination-bullet) {
+  width: 12px;
+  height: 12px;
+  background: #cbd5e0;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.swiper :global(.swiper-pagination-bullet-active) {
+  background: #667eea;
+  width: 30px;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .swiperWrapper {
+    gap: 0;
+  }
+
+  .navButton {
+    display: none;
+  }
+
+  .swiper {
+    width: 100%;
+  }
+
+  .card {
+    padding: 2rem 1.5rem;
+  }
+
+  .review {
+    font-size: 1rem;
+  }
+}
