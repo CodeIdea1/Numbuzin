@@ -7,6 +7,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .section {
+    background: none;
+  }
+}
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -54,15 +60,19 @@
 }
 
 .overlay1 {
-  top: -30px;
+  top: -70px;
+  right: -70px;
 }
 
 .overlay2 {
-  top: 40px;
+  top: -100px;
+  right: -70px;
+  scale: .7;
 }
 
 .overlay3 {
-  left: 30px;
+  left: 0px;
+  top: 25px;
 }
 
 .leftText,
@@ -123,6 +133,9 @@
 }
 
 @media (max-width: 768px) {
+  .section {
+    margin-top: -100px;
+  }
   .imageContainer {
     height: 500px;
   }
@@ -130,6 +143,25 @@
   .textOverlay {
     padding: 0 5%;
   }
+
+.overlay1 {
+  top: -40px;
+  right: -30px;
+  scale: .8;
+}
+
+
+.overlay2 {
+  display: none;
+}
+
+
+.overlay3 {
+  left: 10px;
+  top: 25px;
+}
+
+
 
   .leftText,
   .rightText {

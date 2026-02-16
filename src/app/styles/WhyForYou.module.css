@@ -49,13 +49,24 @@
 }
 
 .text {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: #f0f0f0;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: rgb(27, 27, 27);
   text-align: center;
+  font-weight: 700;
 }
 @media (max-width: 768px) {
   .imageBox {
     padding: 0;
   }
+  .content {
+    padding: 20px 10px;
+  }
+  .text {
+    color: #1b1b1b;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
 }

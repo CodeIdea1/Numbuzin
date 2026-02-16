@@ -14,36 +14,37 @@ import styles from '../styles/Testimonials.module.css';
 export default function Testimonials() {
   const swiperRef = useRef<SwiperType | null>(null);
 
-  const testimonials = [
-    {
-      name: 'سارة أحمد',
-      location: 'الرياض، السعودية',
-      rating: 5,
-      review: 'منتج رائع! لاحظت تحسن كبير في الهالات السوداء بعد 3 أسابيع فقط. ملمسه خفيف ولا يسبب أي تهيج.',
-      image: 'https://i.pravatar.cc/150?img=47'
-    },
-    {
-      name: 'ليلى محمد',
-      location: 'دبي، الإمارات',
-      rating: 5,
-      review: 'أفضل سيرم للعين جربته على الإطلاق! النتائج واضحة والسعر مناسب جداً مقارنة بالجودة.',
-      image: 'https://i.pravatar.cc/150?img=45'
-    },
-    {
-      name: 'نور علي',
-      location: 'مسقط، عمان',
-      rating: 5,
-      review: 'عيوني أصبحت أكثر إشراقاً وشباباً. التجاعيد الدقيقة اختفت تماماً. أنصح به بشدة!',
-      image: 'https://i.pravatar.cc/150?img=38'
-    },
-    {
-      name: 'مريم خالد',
-      location: 'الكويت، الكويت',
-      rating: 5,
-      review: 'استخدمته لمدة شهرين والنتيجة مذهلة! بشرتي حول العين أصبحت أكثر نعومة وإشراقاً.',
-      image: 'https://i.pravatar.cc/150?img=49'
-    }
-  ];
+const testimonials = [
+  {
+    name: 'سارة أحمد',
+    location: 'الرياض، السعودية',
+    rating: 5,
+    review: 'كنت أعاني من هالات واضحة خصوصًا مع السهر، وبعد استخدامه تقريبًا 3 أسابيع لاحظت فرق حلو في التفتيح والنعومة. خفيف على البشرة وما سبب لي أي تهيج.',
+    image: 'https://i.pravatar.cc/150?img=47'
+  },
+  {
+    name: 'ليلى محمد',
+    location: 'دبي، الإمارات',
+    rating: 5,
+    review: 'صراحة توقعت نتيجة بسيطة لكن فرق معي أكثر مما توقعت، خصوصًا في شكل الخطوط الخفيفة حول العين. استخدمه يوميًا وما حسّيت بأي إحساس مزعج.',
+    image: 'https://i.pravatar.cc/150?img=45'
+  },
+  {
+    name: 'نور علي',
+    location: 'مسقط، عمان',
+    rating: 5,
+    review: 'الهالات ما اختفت تمامًا لكن خفّت بشكل واضح، ونظرة العين صارت أنعم وأفتح. حبيت إنه سريع الامتصاص وما يترك أثر دهني.',
+    image: 'https://i.pravatar.cc/150?img=38'
+  },
+  {
+    name: 'مريم خالد',
+    location: 'الكويت، الكويت',
+    rating: 5,
+    review: 'بعد حوالي شهر من الاستخدام المنتظم حسّيت المنطقة حول العين صارت أنعم ومشدودة شوي، والهالات أخف من قبل. مستمرة عليه لأنه فعلاً مريح للبشرة.',
+    image: 'https://i.pravatar.cc/150?img=49'
+  }
+];
+
 
   return (
     <section className={styles.section}>

@@ -75,11 +75,10 @@ export default function HeroSection() {
         <div className={styles.contentWrapper}>
           <div ref={contentRef} className={styles.content}>
             <h2 className={styles.title}>
-              سيرم العيون الثوري
+ثورة جديدة في عالم عناية العيون بالريتينول            
             </h2>
             <p className={styles.subtitle}>
-              تركيبة متقدمة للقضاء على الهالات السوداء والتجاعيد حول العين
-            </p>
+ودّعي الهالات والتجاعيد… واستقبلي إشراقة أقوى من أي وقت            </p>
           </div>
         </div>
       </div>

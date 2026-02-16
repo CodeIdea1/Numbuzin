@@ -39,7 +39,7 @@
 }
 
 .featureTitle {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #000000;
   margin-bottom: 0.5rem;
@@ -60,10 +60,11 @@
 }
 
 .feature p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #f0f0f0;
   margin: 0;
   text-align: center;
+  font-weight: 700;
 }
 
 
@@ -80,4 +81,20 @@
     color: white;
     text-align: center;
   }
+
+  .feature p {
+  color: #141414;
+    font-size: 1.3rem;
+}
+  .features {
+    max-width: 100%;
+    width: 100%;
+    
+}
+.feature {
+  padding: 10px 30px;
+}
+.imageBox {
+  padding: 10px;
+}
 }
