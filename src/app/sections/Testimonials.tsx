@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { AiFillStar } from 'react-icons/ai';
@@ -11,7 +12,7 @@ import 'swiper/css/navigation';
 import styles from '../styles/Testimonials.module.css';
 
 export default function Testimonials() {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   const testimonials = [
     {
