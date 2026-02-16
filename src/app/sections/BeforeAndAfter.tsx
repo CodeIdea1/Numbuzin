@@ -15,7 +15,7 @@ export default function BeforeAndAfter() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const slides = [slide1Ref.current, slide2Ref.current, slide3Ref.current].filter((slide): slide is HTMLDivElement => slide !== null);
+      const slides = [slide1Ref.current, slide2Ref.current, slide3Ref.current].filter((slide) => slide !== null) as HTMLDivElement[];
       
       slides.forEach((slide, index) => {
         const leftText = slide.querySelector(`.${styles.leftText}`);
