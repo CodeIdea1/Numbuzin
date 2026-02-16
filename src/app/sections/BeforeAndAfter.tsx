@@ -15,11 +15,9 @@ export default function BeforeAndAfter() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const slides = [slide1Ref.current, slide2Ref.current, slide3Ref.current];
+      const slides = [slide1Ref.current, slide2Ref.current, slide3Ref.current].filter((slide): slide is HTMLDivElement => slide !== null);
       
       slides.forEach((slide, index) => {
-        if (!slide) return;
-        
         const leftText = slide.querySelector(`.${styles.leftText}`);
         const rightText = slide.querySelector(`.${styles.rightText}`);
         const leftArrow = slide.querySelector(`.${styles.leftArrow}`);
@@ -44,8 +42,6 @@ export default function BeforeAndAfter() {
           const progress = self.progress;
 
           slides.forEach((slide, index) => {
-            if (!slide) return;
-            
             const leftText = slide.querySelector(`.${styles.leftText}`);
             const rightText = slide.querySelector(`.${styles.rightText}`);
             const leftArrow = slide.querySelector(`.${styles.leftArrow}`);
