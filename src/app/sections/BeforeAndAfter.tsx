@@ -18,10 +18,12 @@ export default function BeforeAndAfter() {
       const slides = [slide1Ref.current, slide2Ref.current, slide3Ref.current];
       
       slides.forEach((slide, index) => {
-        const leftText = slide?.querySelector(`.${styles.leftText}`);
-        const rightText = slide?.querySelector(`.${styles.rightText}`);
-        const leftArrow = slide?.querySelector(`.${styles.leftArrow}`);
-        const rightArrow = slide?.querySelector(`.${styles.rightArrow}`);
+        if (!slide) return;
+        
+        const leftText = slide.querySelector(`.${styles.leftText}`);
+        const rightText = slide.querySelector(`.${styles.rightText}`);
+        const leftArrow = slide.querySelector(`.${styles.leftArrow}`);
+        const rightArrow = slide.querySelector(`.${styles.rightArrow}`);
         
         if (index === 0) {
           gsap.set(slide, { opacity: 1, scale: 1 });
@@ -42,10 +44,12 @@ export default function BeforeAndAfter() {
           const progress = self.progress;
 
           slides.forEach((slide, index) => {
-            const leftText = slide?.querySelector(`.${styles.leftText}`);
-            const rightText = slide?.querySelector(`.${styles.rightText}`);
-            const leftArrow = slide?.querySelector(`.${styles.leftArrow}`);
-            const rightArrow = slide?.querySelector(`.${styles.rightArrow}`);
+            if (!slide) return;
+            
+            const leftText = slide.querySelector(`.${styles.leftText}`);
+            const rightText = slide.querySelector(`.${styles.rightText}`);
+            const leftArrow = slide.querySelector(`.${styles.leftArrow}`);
+            const rightArrow = slide.querySelector(`.${styles.rightArrow}`);
             
             if (index === 0 && progress < 0.4) {
               gsap.to(slide, { opacity: 1, scale: 1, duration: 0.3 });
